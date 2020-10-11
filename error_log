@@ -1,0 +1,14 @@
+[16-Jul-2018 16:24:02 UTC] PHP Warning:  include(conectar.php): failed to open stream: No such file or directory in /home/pjrvp87atej9/public_html/index.php on line 121
+[16-Jul-2018 16:24:02 UTC] PHP Warning:  include(): Failed opening 'conectar.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/pjrvp87atej9/public_html/index.php on line 121
+[16-Jul-2018 16:24:02 UTC] PHP Notice:  Undefined variable: conexion in /home/pjrvp87atej9/public_html/index.php on line 123
+[16-Jul-2018 16:24:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/pjrvp87atej9/public_html/index.php:123
+Stack trace:
+#0 {main}
+  thrown in /home/pjrvp87atej9/public_html/index.php on line 123
+[16-Jul-2018 16:24:09 UTC] PHP Warning:  include(conectar.php): failed to open stream: No such file or directory in /home/pjrvp87atej9/public_html/index.php on line 121
+[16-Jul-2018 16:24:09 UTC] PHP Warning:  include(): Failed opening 'conectar.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/pjrvp87atej9/public_html/index.php on line 121
+[16-Jul-2018 16:24:09 UTC] PHP Notice:  Undefined variable: conexion in /home/pjrvp87atej9/public_html/index.php on line 123
+[16-Jul-2018 16:24:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/pjrvp87atej9/public_html/index.php:123
+Stack trace:
+#0 {main}
+  thrown in /home/pjrvp87atej9/public_html/index.php on line 123

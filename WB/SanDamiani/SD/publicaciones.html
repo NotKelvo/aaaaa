@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+     <link href="https://fonts.googleapis.com/css?family=Raleway:400|Abril+Fatface" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+      <link rel="stylesheet" href="css/style.css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Publicaciones</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <!-- Important Owl stylesheet -->
+        <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+
+        <!-- Default Theme -->
+        <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+        <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+
+
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="top" class="navbar navbar-dark navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-bars fa-2x"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><strong>San </strong>Damiani</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="index.html">Inicio</a></li>
+                        <li><a href="#">A cerca de nosotros</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="publicaciones.html">Publicaciones</a></li>
+                        <li><a href="contactanos.html">Contactanos</a></li>
+                    </ul>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <div class="panel-body">
+      <form role="form" id="status" enctype="multipart/form-data" method="post" action="./?action=publish">
+      <div class="form-group">
+        <textarea rows="6" name="content" id="statusarea" class="form-control" placeholder="¿Como te sientes?"></textarea>
+        <input type="hidden" name="receptor_type_id" value="1">
+        <input type="hidden" name="receptor_ref_id" value="2">
+      </div>
+      <div class="buttons">
+      <div class="form-group">
+      <div class="row">
+      <div class="col-md-4">
+      <input type="file" name="image" class="btn btn-defalt btn-block">
+      </div>
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
+      <button type="submit" id="publish" class="btn btn-primary btn-block">Publicar</button>
+      </div>
+      </div>
+      </div>
+      </div>
+      </form>
+        </div>
+        </div>
+        <script type="text/javascript">
+      function loadcomments(t,r){
+        $.post("./?action=loadcomments","t="+t+"&r="+r, function(data){
+          $("#comments-"+t+"-"+r).html(data);
+        });
+      }
+      </script>
+      <div class="jumbotron">
+      <h2>No hay publicaciones</h2>
+      </div>
+
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+      </div>
+
+      </div>
+      <script>
+      function like(type,id){
+      var base = "lk";
+      if(type==2){ base = "ilk"; }
+      $.post("index.php?action=addheart","t="+type+"&r="+id,function(data){
+      $("a#"+base+"-"+id).html("<i class='fa fa-thumbs-up'></i> "+data);
+      });
+
+
+      if($("a#"+base+"-"+id).hasClass("btn-default")){
+        $("a#"+base+"-"+id).removeClass("btn-default");
+        $("a#"+base+"-"+id).addClass("btn-primary");
+      }else if($("a#"+base+"-"+id).hasClass("btn-primary")){
+        $("a#"+base+"-"+id).removeClass("btn-primary");
+        $("a#"+base+"-"+id).addClass("btn-default");
+      }
+      }
+      </script>
+
+
+          </section>
+
+
+          <div id="social" class="content-block">
+              <div class="container text-center">
+                  <div class="hexagon"><a href="#"><i class="fa fa-facebook"></i></a></div>
+                  <div class="hexagon"><a href="#"><i class="fa fa-twitter"></i></a></div>
+                  <div class="hexagon"><a href="#"><i class="fa fa-google-plus"></i></a></div>
+                  <div class="hexagon"><a href="#"><i class="fa fa-instagram"></i></a></div>
+                  <!-- <div class="hexagon"><a href="#"><i class="fa fa-pinterest"></i></a></div> -->
+                  <div class="hexagon"><a href="#"><i class="fa fa-envelope"></i></a></div>
+              </div>
+          </div>
+
+
+          <footer class="content-block content-block-dark">
+              <p>&copy; Copyright San Damiani 2018.</a></p>
+          </footer>
+
+          <script src="js/jquery-2.1.3.min.js"></script>
+          <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+          <script src="js/vendor/bootstrap.min.js"></script>
+          <!-- Include js plugin -->
+          <script src="owl-carousel/owl.carousel.js"></script>
+
+          <script src="js/main.js"></script>
+
+
+
+
+    </body>
+</html>

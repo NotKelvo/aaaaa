@@ -1,0 +1,72 @@
+.contenedors {
+	max-width: 1200px;/*caracteristicas del contenedor*/
+	margin:50px auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;/*justifica la posición del elemento*/
+	border-radius: 5px;
+	margin-top:20px;/*margen inferior*/
+}
+div.contenedor_tarjeta{
+	margin: 20px;
+	width:200px;
+}
+.contenedor_tarjeta:hover figure {
+	-webkit-transform: perspective(600px) rotateY(180deg);/*rotación de imagenes*/
+	-ms-transform: perspective(600px) rotateY(180deg);
+	-o-transform: perspective(600px) rotateY(180deg);
+	transform: perspective(600px) rotateY(180deg);
+}
+.contenedor_tarjeta:hover figure img{
+	filter: blur(20px);/*En esta parte le agregamos un blur para tener desenfocado la imagen*/
+}
+figure{
+	width: 300px;
+	height: 300px;/*colocamos los tamaños de las imagenes en genral*/
+	margin: 0px;
+	position: relative;/*colocamos la posición que se le desa poner a las imagenes*/
+	transition: all ease .2s;
+	transform-style: preserve-3d;/*este segmento es para que tome la imagen como 3D*/
+	transform: perspective(600px) rotateY(0deg);/*toma la imagen y la gira en x grados*/
+}
+figure .frontal, 
+figure .trasera{
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;/*asignamos esta parte para que tenga un borde de forma cuadrada o redondeado*/
+	transition: all ease.5s;/*duración del movimiento*/
+}
+figure .frontal{
+	display: block;
+}
+figure .trasera{
+	 position: absolute;/*texto en la posición de la imagen*/
+	top: 0px;
+	padding: 20px;/*asignación de lugar del texto*/
+	color: black;
+	transform: perspective(600px) rotateY(180deg);
+	backface-visibility: hidden;/*texto visible solo en la parte trasera de la imagen*/
+	overflow: auto;/*medio de seguridad del texto*/
+}
+.contenedor_tarjeta p{
+	font-size: 23px;/*tamaño del texto*/
+}
+.fb {
+	position: relative;
+	transform: perspective(600px) rotateY(0deg);
+}
+.vale{
+	position: relative;
+	top: 300px;
+}
+.vala{
+	position: relative;
+	top: 300px;
+	right: 260px;
+}
+.vele{
+	position: relative;
+	top: 300px;
+	left: -200px;
+}
